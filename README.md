@@ -11,6 +11,10 @@ https://github.com/Mushakushi/UIToolkitMenuFramework.git?path=Assets/Mushakushi.
 
 If you are specifying a version, append #{VERSION} to the end of the git URL. 
 
+```bash
+https://github.com/Mushakushi/UIToolkitMenuFramework.git?path=Assets/Mushakushi.MenuFramework#{VERSION#}
+```
+
 ## Usage
 
 ### Setup the Menu Controller 

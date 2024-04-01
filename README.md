@@ -15,6 +15,10 @@ If you are specifying a version, append #{VERSION} to the end of the git URL.
 https://github.com/Mushakushi/UIToolkitMenuFramework.git?path=Assets/Mushakushi.MenuFramework#{VERSION}
 ```
 
+When using the git URL, install the following upm dependencies:
+https://openupm.com/packages/com.mackysoft.serializereference-extensions/
+https://openupm.com/packages/com.rotaryheart.serializabledictionarylite/
+
 ## Usage
 
 ### Setup the Menu Controller 
@@ -32,7 +36,7 @@ A basic setup would look something like this:
 ### Basic Usage
 Just use the `Menu Event Channel` to subscribe and invoke menu events. Example usage can be found in the [Example folder](https://github.com/Mushakushi/UIToolkitMenuFramework/tree/main/Assets/Example).
 
-#### About Extensions
+**About Extensions**
 An extension is some piece of code that is called when an UXML menu is attached
 to the Menu Controller's root document. For example, a `MenuConnectionButtonExtension`
 will trigger a menu to be populated on the screen based on a query, to which multiple 

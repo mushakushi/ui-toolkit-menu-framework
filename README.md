@@ -28,7 +28,7 @@ A basic setup would look something like this:
 ### Basic Usage
 Just use the `Menu Event Channel` to subscribe and invoke menu events. Example usage can be found in the [Example folder](https://github.com/Mushakushi/UIToolkitMenuFramework/tree/main/Assets/Example).
 
-### About Extensions
+#### About Extensions
 An extension is some piece of code that is called when an UXML menu is attached
 to the Menu Controller's root document. For example, a `MenuConnectionButtonExtension`
 will trigger a menu to be populated on the screen based on a query, to which multiple 
@@ -38,7 +38,9 @@ of these connections can exist.
 A menu is a Scriptable Object containing a UXML menu and any extensions applied to it.
 A `MenuConnectionButtonExtension` is added by default. 
 
-## NameClassSelectorAttribute
+## Attributes
+
+### NameClassSelectorAttribute
 Add this attribute to a string or string collection, in order to get a list of 
 name or classes from a `VisualTreeAsset`, `UIDocument` or a string collection. 
 This is used throughout the project to avoid having to give hard-coded strings. 
@@ -50,7 +52,7 @@ public UIDocument document;
 public string className; 
 ```
 
-## UQueryBuilderSerializable
+### UQueryBuilderSerializable
 In combination with the `NameClassSelectorAttribute`, this class creates a psuedo-`UQueryBuilder`
 that allows you to use much of the same selectors within the editor and then build into 
 the actual class. 

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: ExampleMenu
   m_EditorClassIdentifier: 
   <Asset>k__BackingField: {fileID: 9197481963319205126, guid: 78ccd585999cdd14bbbabff45a7b3320, type: 3}
-  <Extensions>k__BackingField: []
+  <Extensions>k__BackingField:
+  - rid: -2
   <MenuConnections>k__BackingField:
     <ButtonNameToMenu>k__BackingField:
       reorderableList:
@@ -51,4 +52,6 @@ MonoBehaviour:
       selectors: []
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }

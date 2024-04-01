@@ -6,7 +6,7 @@ A framework for expediting the creation of menus using UI toolkit.
 from the Add package from git URL option, enter:
 
 ```bash
-https://github.com/Mushakushi/UIToolkitMenuFramework/Assets/Mushakushi.UIAddons.git
+https://github.com/Mushakushi/UIToolkitMenuFramework.git?path=Assets/Mushakushi.UIToolkitMenuFramework
 ```
 
 If you are specifying a version, append #{VERSION} to the end of the git URL. 

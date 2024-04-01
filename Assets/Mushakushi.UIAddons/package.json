@@ -1,0 +1,17 @@
+{
+	"name": "com.mushakushi.menusystem",
+  	"version": "1.0.0",
+  	"displayName": "Menu System",
+  	"description": "Menu system for Unity.",
+  	"unity": "2022.3",
+ 	"keywords": [ "UI", "UI Toolkit", "Input", "Framework" ],
+	"dependencies": {
+		"com.unity.ui": "1.0.0",
+		"com.unity.input": "1.0.0"
+	},
+  	"author": {
+   		"name": "Mushakushi",
+    		"email": "info@mushakushi.com",
+    		"url": "https://www.mushakushi.com"
+  	}
+}

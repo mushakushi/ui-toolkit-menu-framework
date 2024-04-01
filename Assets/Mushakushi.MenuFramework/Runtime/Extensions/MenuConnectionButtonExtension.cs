@@ -1,12 +1,12 @@
 ﻿using System;
-using Mushakushi.UIAddons.Runtime.ExtensionFramework;
-using Mushakushi.UIAddons.Runtime.SerializableUQuery;
+using Mushakushi.MenuFramework.Runtime.ExtensionFramework;
+using Mushakushi.MenuFramework.Runtime.SerializableUQuery;
 using RotaryHeart.Lib.SerializableDictionary;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
-namespace Mushakushi.UIAddons.Runtime.Extensions
+namespace Mushakushi.MenuFramework.Runtime.Extensions
 {
     /// <summary>
     /// Connects multiple menus together with one extension. 

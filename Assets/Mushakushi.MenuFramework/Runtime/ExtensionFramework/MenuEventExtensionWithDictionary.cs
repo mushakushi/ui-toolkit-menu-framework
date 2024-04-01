@@ -2,7 +2,7 @@ using System;
 using RotaryHeart.Lib.SerializableDictionary;
 using UnityEngine.UIElements;
 
-namespace Mushakushi.UIAddons.Runtime.ExtensionFramework
+namespace Mushakushi.MenuFramework.Runtime.ExtensionFramework
 {
     [Serializable]
     public abstract class MenuEventExtensionWithDictionary<TVisualElement, TKey, TValue>: MenuEventExtension<TVisualElement>

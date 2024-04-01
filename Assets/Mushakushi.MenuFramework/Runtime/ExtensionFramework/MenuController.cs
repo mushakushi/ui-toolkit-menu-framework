@@ -1,10 +1,10 @@
 ﻿using JetBrains.Annotations;
-using Mushakushi.UIAddons.Runtime.SerializableUQuery;
+using Mushakushi.MenuFramework.Runtime.SerializableUQuery;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
-namespace Mushakushi.UIAddons.Runtime.ExtensionFramework
+namespace Mushakushi.MenuFramework.Runtime.ExtensionFramework
 {
     /// <summary>
     /// Controls a menu. 

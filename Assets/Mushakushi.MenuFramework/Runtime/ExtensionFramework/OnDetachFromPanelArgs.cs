@@ -1,7 +1,7 @@
 using System;
 using UnityEngine.UIElements;
 
-namespace Mushakushi.UIAddons.Runtime.ExtensionFramework
+namespace Mushakushi.MenuFramework.Runtime.ExtensionFramework
 {
     /// <summary>
     /// Describes a <see cref="VisualElement"/> that is detaching from a panel. 

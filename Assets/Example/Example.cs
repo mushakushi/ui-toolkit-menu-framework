@@ -1,4 +1,4 @@
-using Mushakushi.UIAddons.Runtime.ExtensionFramework;
+using Mushakushi.MenuFramework.Runtime.ExtensionFramework;
 using UnityEngine;
 using UnityEngine.UIElements;
 

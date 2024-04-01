@@ -6,7 +6,7 @@ using System.Collections;
 using System.Reflection;
 using UnityEditor;
 
-namespace Mushakushi.UIAddons.Editor.SerializableUQuery
+namespace Mushakushi.MenuFramework.Editor.SerializableUQuery
 {
     public static class ReflectionUtility
     {

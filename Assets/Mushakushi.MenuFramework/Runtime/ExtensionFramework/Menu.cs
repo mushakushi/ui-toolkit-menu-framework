@@ -1,9 +1,9 @@
 ﻿using JetBrains.Annotations;
-using Mushakushi.UIAddons.Runtime.Extensions;
+using Mushakushi.MenuFramework.Runtime.Extensions;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace Mushakushi.UIAddons.Runtime.ExtensionFramework
+namespace Mushakushi.MenuFramework.Runtime.ExtensionFramework
 {
     [UsedImplicitly, CreateAssetMenu(fileName = nameof(Menu), menuName = "ScriptableObjects/UI/Menu", order = 0)]
     public class Menu: ScriptableObject

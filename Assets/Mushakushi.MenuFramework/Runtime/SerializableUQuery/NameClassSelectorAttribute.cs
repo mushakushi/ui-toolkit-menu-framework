@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace Mushakushi.UIAddons.Runtime.SerializableUQuery
+namespace Mushakushi.MenuFramework.Runtime.SerializableUQuery
 {
     /// <summary>
     /// Describes the type of selector.

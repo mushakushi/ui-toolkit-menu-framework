@@ -1,8 +1,8 @@
-using Mushakushi.UIAddons.Runtime.SerializableUQuery;
+using Mushakushi.MenuFramework.Runtime.SerializableUQuery;
 using UnityEditor;
 using UnityEngine;
 
-namespace Mushakushi.UIAddons.Editor.SerializableUQuery
+namespace Mushakushi.MenuFramework.Editor.SerializableUQuery
 {
     [CustomPropertyDrawer(typeof(UQueryBuilderSerializable))]
     public class UQueryBuilderSerializableDrawer : PropertyDrawer

@@ -1,12 +1,12 @@
 using System;
-using Mushakushi.UIAddons.Runtime.ExtensionFramework;
-using Mushakushi.UIAddons.Runtime.SerializableUQuery;
+using Mushakushi.MenuFramework.Runtime.ExtensionFramework;
+using Mushakushi.MenuFramework.Runtime.SerializableUQuery;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
-namespace Mushakushi.UIAddons.Runtime.Extensions
+namespace Mushakushi.MenuFramework.Runtime.Extensions
 {
     /// <summary>
     /// Invokes arbitrary <see cref="UnityEvent{Button}"/> events on <see cref="Button"/> click. 

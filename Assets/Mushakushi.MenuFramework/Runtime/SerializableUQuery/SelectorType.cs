@@ -1,4 +1,4 @@
-namespace Mushakushi.UIAddons.Runtime.SerializableUQuery
+namespace Mushakushi.MenuFramework.Runtime.SerializableUQuery
 {
     /// <summary>
     /// The type of selector. 

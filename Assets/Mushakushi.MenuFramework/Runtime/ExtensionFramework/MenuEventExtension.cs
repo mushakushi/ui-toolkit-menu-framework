@@ -2,7 +2,7 @@
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
-namespace Mushakushi.UIAddons.Runtime.ExtensionFramework
+namespace Mushakushi.MenuFramework.Runtime.ExtensionFramework
 {
     /// <inheritdoc cref="MenuExtension{T}"/>
     public abstract class MenuEventExtension<T>: MenuExtension<T> where T: VisualElement

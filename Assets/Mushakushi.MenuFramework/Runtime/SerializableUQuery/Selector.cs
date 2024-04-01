@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Mushakushi.UIAddons.Runtime.SerializableUQuery
+namespace Mushakushi.MenuFramework.Runtime.SerializableUQuery
 {
     [System.Serializable]
     public class Selector

@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Mushakushi.UIAddons.Runtime.ExtensionFramework
+namespace Mushakushi.MenuFramework.Runtime.ExtensionFramework
 {
     [CreateAssetMenu(fileName = nameof(MenuEventChannel), menuName = "ScriptableObjects/UI/Menu Event Channel", order = 0)]
     public class MenuEventChannel : ScriptableObject

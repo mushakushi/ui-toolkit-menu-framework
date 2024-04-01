@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace Mushakushi.UIAddons.Runtime.SerializableUQuery
+namespace Mushakushi.MenuFramework.Runtime.SerializableUQuery
 {
     /// <summary>
     /// Creates and serializes a pseudo-<see cref="UQueryBuilder{T}"/>. 

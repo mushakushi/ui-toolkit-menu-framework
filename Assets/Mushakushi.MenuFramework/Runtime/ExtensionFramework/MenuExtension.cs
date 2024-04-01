@@ -1,8 +1,8 @@
-﻿using Mushakushi.UIAddons.Runtime.SerializableUQuery;
+﻿using Mushakushi.MenuFramework.Runtime.SerializableUQuery;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
-namespace Mushakushi.UIAddons.Runtime.ExtensionFramework {     
+namespace Mushakushi.MenuFramework.Runtime.ExtensionFramework {     
     
     /// <summary>
     /// An extension to <see cref="MenuController"/>. 

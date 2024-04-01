@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Mushakushi.UIAddons.Runtime.SerializableUQuery;
+using Mushakushi.MenuFramework.Runtime.SerializableUQuery;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace Mushakushi.UIAddons.Editor.SerializableUQuery
+namespace Mushakushi.MenuFramework.Editor.SerializableUQuery
 {
     [CustomPropertyDrawer(typeof(NameClassSelectorAttribute))]
     public class NameClassSelectorAttributeDrawer : PropertyDrawer

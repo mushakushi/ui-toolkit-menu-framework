@@ -72,8 +72,9 @@ namespace Mushakushi.MenuFramework.Runtime.ExtensionFramework
         private void Awake()
         {
             RootContainer = string.IsNullOrEmpty(RootContainerName)
-                ? rootDocument.rootVisualElement.Q<VisualElement>(RootContainerName)
-                : rootDocument.rootVisualElement;
+                ? rootDocument.rootVisualElement
+                : rootDocument.rootVisualElement.Q<VisualElement>(RootContainerName);
+            
             Close();
         }
 

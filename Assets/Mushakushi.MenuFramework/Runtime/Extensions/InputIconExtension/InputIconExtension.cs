@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
 // ReSharper disable once CheckNamespace
-namespace Mushakushi.UIAddons.Runtime.Extensions
+namespace Mushakushi.MenuFramework.Runtime.Extensions
 {
     /// <summary>
     /// Sets the background image of a <see cref="VisualElement"/> to match with the input icon defined by its name.

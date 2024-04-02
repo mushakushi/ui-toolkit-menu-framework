@@ -2,7 +2,7 @@ using RotaryHeart.Lib.SerializableDictionary;
 using UnityEngine;
 
 // ReSharper disable once CheckNamespace
-namespace Mushakushi.UIAddons.Runtime.Extensions
+namespace Mushakushi.MenuFramework.Runtime.Extensions
 {
     /// <summary>
     /// Class for determining which input icon represents a binding per device type. 

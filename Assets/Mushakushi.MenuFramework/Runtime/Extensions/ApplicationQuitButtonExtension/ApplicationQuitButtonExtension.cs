@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
 // ReSharper disable once CheckNamespace
-namespace Mushakushi.UIAddons.Runtime.Extensions
+namespace Mushakushi.MenuFramework.Runtime.Extensions
 {
     [Serializable]
     public class ApplicationQuitButtonExtension: MenuEventExtension<Button>

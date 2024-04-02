@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 // ReSharper disable once CheckNamespace
-namespace Mushakushi.UIAddons.Runtime.Extensions
+namespace Mushakushi.MenuFramework.Runtime.Extensions
 {
     /// <summary>
     /// Attach this to the scene to able to quit the application with a certain key. 

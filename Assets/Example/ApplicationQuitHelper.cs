@@ -1,4 +1,4 @@
-﻿using Mushakushi.UIAddons.Runtime.Extensions;
+﻿using Mushakushi.MenuFramework.Runtime.Extensions;
 using UnityEngine;
 
 namespace Example

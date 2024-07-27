@@ -13,42 +13,69 @@ MonoBehaviour:
   m_Name: ExampleMenu
   m_EditorClassIdentifier: 
   <Asset>k__BackingField: {fileID: 9197481963319205126, guid: 78ccd585999cdd14bbbabff45a7b3320, type: 3}
-  <Extensions>k__BackingField: []
-  <MenuConnections>k__BackingField:
-    <ButtonNameToMenu>k__BackingField:
-      reorderableList:
-        canAdd: 1
-        canRemove: 1
-        draggable: 1
-        expandable: 1
-        multipleSelection: 1
-        isExpanded: 1
-        label:
-          m_Text: Keys
-          m_Image: {fileID: 0}
-          m_Tooltip: 
-        headerHeight: 18
-        footerHeight: 13
-        slideEasing: 0.15
-        verticalSpacing: 2
-        showDefaultBackground: 1
-        elementDisplayType: 0
-        elementNameProperty: 
-        elementNameOverride: 
-        elementIcon: {fileID: 0}
-      reqReferences: {fileID: 0}
-      isExpanded: 1
-      _keyValues:
-      - Next
-      _keys:
-      - Next
-      _values:
-      - {fileID: 11400000, guid: 437a9039c04ccdb43ad075d872fbb7ed, type: 2}
-    menuEventChannel: {fileID: 11400000, guid: 7d49f1214088cf8438f3a0d2b2459654, type: 2}
-    <Query>k__BackingField:
-      nameOptions: []
-      classOptions: []
-      selectors: []
+  <Extensions>k__BackingField:
+  - rid: 3718529147642576897
+  - rid: 3718529147642576898
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 3718529147642576897
+      type: {class: UnityEventButtonExtension, ns: Mushakushi.MenuFramework.Runtime.Extensions, asm: Framework.UI.Runtime}
+      data:
+        callbacks:
+        - m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 445690501879535126, guid: c7c2b6ee51d7866409df0fe73b4c0f7e, type: 3}
+              m_TargetAssemblyTypeName: Example.Example, Assembly-CSharp
+              m_MethodName: Print
+              m_Mode: 0
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+        <Query>k__BackingField:
+          selectors:
+          - type: 0
+            state: 0
+            names:
+            - Wow
+            classes: []
+    - rid: 3718529147642576898
+      type: {class: MenuConnectionButtonExtension, ns: Mushakushi.MenuFramework.Runtime.Extensions, asm: Framework.UI.Runtime}
+      data:
+        <ButtonNameToMenu>k__BackingField:
+          reorderableList:
+            canAdd: 1
+            canRemove: 1
+            draggable: 1
+            expandable: 1
+            multipleSelection: 1
+            isExpanded: 1
+            label:
+              m_Text: Keys
+              m_Image: {fileID: 0}
+              m_Tooltip: 
+            headerHeight: 18
+            footerHeight: 13
+            slideEasing: 0.15
+            verticalSpacing: 2
+            showDefaultBackground: 1
+            elementDisplayType: 0
+            elementNameProperty: 
+            elementNameOverride: 
+            elementIcon: {fileID: 0}
+          reqReferences: {fileID: 0}
+          isExpanded: 1
+          _keyValues:
+          - Next
+          _keys:
+          - Next
+          _values:
+          - {fileID: 11400000, guid: 437a9039c04ccdb43ad075d872fbb7ed, type: 2}
+        menuEventChannel: {fileID: 11400000, guid: 7d49f1214088cf8438f3a0d2b2459654, type: 2}
+        <Query>k__BackingField:
+          selectors: []

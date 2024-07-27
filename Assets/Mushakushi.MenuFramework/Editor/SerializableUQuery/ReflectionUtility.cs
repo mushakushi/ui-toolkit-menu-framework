@@ -97,7 +97,7 @@ namespace Mushakushi.MenuFramework.Editor.SerializableUQuery
         /// <returns>The value of the specified field or property if found; otherwise, null.</returns>
         /// <remarks>
         /// This method searches for both public and non-public fields and properties,
-        /// including those inherited from base classes. It ignores the case when searching for properties.
+        /// including those inherited from base classes. It ignores the letter casing when searching for properties.
         /// </remarks>
         public static object GetFieldValue(object source, string name)
         {

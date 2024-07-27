@@ -1,6 +1,4 @@
 using System;
-using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace Mushakushi.MenuFramework.Runtime.SerializableUQuery
@@ -11,51 +9,7 @@ namespace Mushakushi.MenuFramework.Runtime.SerializableUQuery
     [Serializable]
     public struct UQueryBuilderSerializable
     {
-        [SerializeField]
-        private List<string> nameOptions;
-
-        public List<string> NameOptions
-        {
-            get => nameOptions;
-            set => SetNameOptions(value);
-        }
-        
-        [SerializeField]
-        private List<string> classOptions;
-
-        public List<string> ClassOptions
-        {
-            get => classOptions;
-            set => SetClassOptions(value);
-        }
-
         public Selector[] selectors;
-
-        /// <summary>
-        /// Sets <see cref="nameOptions"/>, and applies the change
-        /// to all <see cref="selectors"/>.
-        /// </summary>
-        public void SetNameOptions(List<string> value)
-        {
-            nameOptions = value;
-            foreach (var selector in selectors)
-            {
-                selector.nameOptions = value;
-            }
-        }
-
-        /// <summary>
-        /// Sets <see cref="classOptions"/>, and applies the change
-        /// to all <see cref="selectors"/>.
-        /// </summary>
-        public void SetClassOptions(List<string> value)
-        {
-            classOptions = value;
-            foreach (var selector in selectors)
-            {
-                selector.classOptions = value; 
-            }
-        }
 
         /// <summary>
         /// Converts a <see cref="UQueryBuilderSerializable"/> into a <see cref="UQueryBuilder{T}"/>

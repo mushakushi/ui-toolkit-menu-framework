@@ -1,5 +1,4 @@
 ﻿using JetBrains.Annotations;
-using Mushakushi.MenuFramework.Runtime.Extensions;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -19,14 +18,5 @@ namespace Mushakushi.MenuFramework.Runtime.ExtensionFramework
         /// </summary>
         [field: SerializeReference, SubclassSelector] 
         public IMenuExtension[] Extensions { get; [UsedImplicitly] protected set; }
-
-        /// <summary>
-        /// The <see cref="Menu"/>(s) that can be navigated to via this.
-        /// </summary>
-        /// <remarks>
-        /// Separate by design from <see cref="Extensions"/> on the basis that most <see cref="Menu"/>s include them.
-        /// </remarks>
-        [field: SerializeField] 
-        public MenuConnectionButtonExtension MenuConnections { get; private set; }
     }
 }

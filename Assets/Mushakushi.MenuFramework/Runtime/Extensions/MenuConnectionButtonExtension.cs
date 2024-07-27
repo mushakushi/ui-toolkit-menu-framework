@@ -19,10 +19,13 @@ namespace Mushakushi.MenuFramework.Runtime.Extensions
         /// </summary>
         [field: SerializeField]
         private ButtonToMenuDictionary ButtonNameToMenu { get; set; }
-        
-        [SerializeField] private MenuEventChannel menuEventChannel;
-        [field: SerializeField] public override UQueryBuilderSerializable Query { get; protected set; }
         [Serializable] public sealed class ButtonToMenuDictionary: SerializableDictionaryBase<string, Menu>{}
+        
+        [SerializeField] 
+        private MenuEventChannel menuEventChannel;
+        
+        [field: SerializeField] 
+        public override UQueryBuilderSerializable Query { get; protected set; } 
         
         protected override Action OnAttach(Button button, PlayerInput playerInput)
         {
@@ -34,13 +37,6 @@ namespace Mushakushi.MenuFramework.Runtime.Extensions
                 if (ButtonNameToMenu.TryGetValue(button.name, out var menu))
                     menuEventChannel.RaiseOnPopulateRequested(menu);
             }
-        }
-        
-        [Serializable]
-        public struct MenuConnection
-        {
-            [NameClassSelector(nameof(UQueryBuilderSerializable.selectors))]
-            public string name;
         }
 
     }

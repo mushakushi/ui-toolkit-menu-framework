@@ -39,6 +39,7 @@ namespace Mushakushi.MenuFramework.Editor.SerializableUQuery
             }
             
             var options = GetSelectors(selectorsContainerObject, uiSelectorAttribute.mode, new string[]{});
+
             if (options == null || options.Length == 0)
             {
                 if (uiSelectorAttribute.showEmptyPopup)
@@ -89,8 +90,7 @@ namespace Mushakushi.MenuFramework.Editor.SerializableUQuery
         /// <remarks>
         /// See documentation for <see cref="NameClassSelectorAttribute"/> for valid types of containers. 
         /// </remarks>
-        private static string[] GetSelectors(object selectorsContainer, SelectorMode mode, 
-            IEnumerable<string> baseOptions)
+        private static string[] GetSelectors(object selectorsContainer, SelectorMode mode, IEnumerable<string> baseOptions)
         {
             VisualElement visualElement; 
             switch (selectorsContainer)
@@ -108,6 +108,7 @@ namespace Mushakushi.MenuFramework.Editor.SerializableUQuery
                 default:
                     return null;
             }
+            
             return mode switch
             {
                 SelectorMode.Name => baseOptions.Concat(GetAllNames(visualElement)).ToArray(),
@@ -127,7 +128,7 @@ namespace Mushakushi.MenuFramework.Editor.SerializableUQuery
         /// </returns>
         private static IEnumerable<string> GetAllNames(VisualElement element)
         {
-            return element.Query().ToList().Select(x => x.name);
+            return element?.Query().ToList().Select(x => x.name) ?? Enumerable.Empty<string>();
         }
 
         /// <returns>
@@ -135,9 +136,9 @@ namespace Mushakushi.MenuFramework.Editor.SerializableUQuery
         /// </returns>
         private static IEnumerable<string> GetAllStyleClasses(VisualElement element)
         {
-            return element.Query().ToList()
+            return element?.Query().ToList()
                 .SelectMany(x => x.GetClasses())
-                .Distinct();
+                .Distinct() ?? Enumerable.Empty<string>();
         }
 
         // private static IEnumerable<string> GetAllNamesAndStyleClasses(VisualElement element)

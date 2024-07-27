@@ -2,6 +2,7 @@
     <ui:Label tabindex="-1" text="Example Menu" parse-escape-sequences="true" display-tooltip-when-elided="true" style="align-self: center; -unity-text-align: upper-center;" />
     <ui:GroupBox style="flex-grow: 1; justify-content: center;">
         <ui:Button text="Open Another Menu" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Next" />
+        <ui:Button text="Print &quot;Wow&quot; To Console" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Wow" />
         <ui:GroupBox style="flex-direction: row;">
             <ui:Label tabindex="-1" text="Press the following key to exit the application:" parse-escape-sequences="true" display-tooltip-when-elided="true" style="align-self: center;" />
             <ui:VisualElement style="flex-grow: 1;" />

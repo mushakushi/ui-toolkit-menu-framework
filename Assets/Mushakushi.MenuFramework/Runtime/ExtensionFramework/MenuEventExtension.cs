@@ -25,9 +25,10 @@ namespace Mushakushi.MenuFramework.Runtime.ExtensionFramework
         /// <seealso cref="OnAttach"/>
         public sealed override void Initialize(VisualElement container, PlayerInput playerInput)
         {
-            var query = Query.EvaluateQuery<T>(container).Descendents<T>().Build();
+            var query = Query.EvaluateQuery<T>(container).Build();
             foreach (var element in query.ToList())
             {
+                if (element == null) continue;
                 var onDetachAction = OnAttach(element, playerInput);
                 RegisterDetachCallback(new OnDetachFromPanelArgs<T>(element, onDetachAction));
             }
@@ -42,8 +43,7 @@ namespace Mushakushi.MenuFramework.Runtime.ExtensionFramework
         /// </param>
         private static void RegisterDetachCallback(OnDetachFromPanelArgs<T> args)
         {
-            args.visualElement
-                .RegisterCallback<DetachFromPanelEvent, OnDetachFromPanelArgs<T>>(OnMenuDetachFromPanel, args);
+            args.visualElement.RegisterCallback<DetachFromPanelEvent, OnDetachFromPanelArgs<T>>(OnMenuDetachFromPanel, args);
         }
 
         /// <summary>
@@ -52,9 +52,7 @@ namespace Mushakushi.MenuFramework.Runtime.ExtensionFramework
         /// </summary>
         private static void OnMenuDetachFromPanel(DetachFromPanelEvent _, OnDetachFromPanelArgs<T> args)
         {
-            args.visualElement
-                .UnregisterCallback<DetachFromPanelEvent, OnDetachFromPanelArgs<T>>(OnMenuDetachFromPanel);
-            
+            args.visualElement.UnregisterCallback<DetachFromPanelEvent, OnDetachFromPanelArgs<T>>(OnMenuDetachFromPanel);
             args.onDetach.Invoke();
         }
     }

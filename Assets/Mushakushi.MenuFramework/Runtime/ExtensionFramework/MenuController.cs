@@ -121,9 +121,15 @@ namespace Mushakushi.MenuFramework.Runtime.ExtensionFramework
                 initialFocusedElement.Focus();
             }
 
-            foreach (var extension in GlobalExtensions) extension?.Initialize(rootDocument.rootVisualElement, CurrentPlayerInput);
-            foreach (var extension in menu.Extensions) extension?.Initialize(RootContainer, CurrentPlayerInput);
-            menu.MenuConnections?.Initialize(RootContainer, CurrentPlayerInput);
+            foreach (var extension in GlobalExtensions)
+            {
+                extension?.Initialize(rootDocument.rootVisualElement, CurrentPlayerInput);
+            }
+
+            foreach (var extension in menu.Extensions)
+            {
+                extension?.Initialize(RootContainer, CurrentPlayerInput);
+            }
         }
 
         /// <summary>

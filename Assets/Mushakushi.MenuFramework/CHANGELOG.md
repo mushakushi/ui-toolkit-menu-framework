@@ -23,6 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - UQueryBuilderSerializable only applied the last selector. It now applies all of them sequentially.
+- Mistakes in package structure.
 
 ## [1.0.1] - 2024-07-26
 

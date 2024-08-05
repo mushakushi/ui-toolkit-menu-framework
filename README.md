@@ -34,6 +34,11 @@ https://openupm.com/packages/com.solidalloy.type-references/
 ## Usage
 
 ### Menu Controller 
+
+![image](https://github.com/user-attachments/assets/9614bb5b-18fa-464f-ba5b-0c7c41e20db8)
+
+_A basic setup would look something like this_
+
 The menu controller provides a simple way to process input (using the Unity Input System) to navigate to 
 and process the data within menus. It also contains a global set of extensions 
 which will be applied to each menu.
@@ -42,10 +47,9 @@ which will be applied to each menu.
 2. Create a `Menu Event Channel`, which is responsible for communicating menu events, and a `PlayerInput` component, which will be used by certain extensions to understand in what context the current menu was opened in. 
 3. Attach  the `MenuController` script to some GameObject. Assign it the previous UI Document and select the `RootContainerName` (if left empty it will use the entire UI Document as the root container) and the `InitialFocusedElementClassName` (if left empty nothing will be focused on any menu, otherwise the first Visual Element with this class name will be focused on every menu when it first populates).
 
-A basic setup would look something like this: 
-![image](https://github.com/Mushakushi/UIToolkitMenuFramework/assets/60948236/556c93bb-57bf-412f-8929-a83aa9880842)
-
 ### Menu
+![image](https://github.com/user-attachments/assets/8189defc-479a-49f8-8d47-24a428a6a4e2)
+
 A menu is a Scriptable Object containing a reference to a UXML document and a collection of extensions to apply to it.
 
 ### Menu Extensions

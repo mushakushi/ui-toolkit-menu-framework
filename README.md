@@ -1,6 +1,8 @@
 # UI Toolkit Menu Framework 
 A framework for expediting the creation of menus using UI toolkit. 
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ## Installation 
 
 **Install via git URL**

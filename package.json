@@ -1,6 +1,6 @@
 {
 	"name": "com.mushakushi.menuframework",
-  	"version": "1.0.1",
+  	"version": "1.0.2",
   	"displayName": "Menu Framework",
   	"description": "A framework for expediting the creation of menus using UI toolkit. ",
   	"unity": "2022.3",

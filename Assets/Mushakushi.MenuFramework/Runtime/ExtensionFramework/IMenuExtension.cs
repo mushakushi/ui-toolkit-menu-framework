@@ -9,6 +9,7 @@ namespace Mushakushi.MenuFramework.Runtime.ExtensionFramework
         /// <summary>
         /// The query to retrieve the <see cref="VisualElement"/>(s) being operated on. 
         /// </summary>
+        [JetBrains.Annotations.UsedImplicitly]
         public UQueryBuilderSerializable Query { get; }
 
         /// <summary>

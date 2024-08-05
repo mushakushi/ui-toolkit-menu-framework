@@ -23,9 +23,17 @@ https://openupm.com/packages/com.mackysoft.serializereference-extensions/
 
 https://openupm.com/packages/com.rotaryheart.serializabledictionarylite/
 
+https://openupm.com/packages/com.solidalloy.type-references/
+
+> ⚠️ For the above package, navigate to 
+> "ProjectSettings > Packages > TypeReferences > Search bar minimum items count. 
+> Change that from 10 to 99999."
+> 
+> https://github.com/SolidAlloy/ClassTypeReference-for-Unity/issues/43
+
 ## Usage
 
-### Setup the Menu Controller 
+### Menu Controller 
 The menu controller provides a simple way to process input (using the Unity Input System) to navigate to 
 and process the data within menus. It also contains a global set of extensions 
 which will be applied to each menu.
@@ -37,19 +45,29 @@ which will be applied to each menu.
 A basic setup would look something like this: 
 ![image](https://github.com/Mushakushi/UIToolkitMenuFramework/assets/60948236/556c93bb-57bf-412f-8929-a83aa9880842)
 
-### Basic Usage
-Just use the `Menu Event Channel` to subscribe and invoke menu events. Example usage can be found in the [Example folder](https://github.com/Mushakushi/UIToolkitMenuFramework/tree/main/Assets/Example).
+### Menu
+A menu is a Scriptable Object containing a reference to a UXML document and a collection of extensions to apply to it.
 
-**About Extensions**
-
-An extension is some piece of code that is called when an UXML menu is attached
+### Menu Extensions
+An extension is some piece of code that is called when the menu is attached
 to the Menu Controller's root document. For example, a `MenuConnectionButtonExtension`
-will trigger a menu to be populated on the screen based on a query, to which multiple 
-of these connections can exist.  
+will trigger a menu to be populated on the screen based on a button press, to which multiple
+of these connections can exist.
 
-## Create a Menu
-A menu is a Scriptable Object containing a UXML menu and any extensions applied to it.
-A `MenuConnectionButtonExtension` is added by default. 
+A global extension on a `MenuController` is an extension that is applied to every menu.
+
+> ⚠️ The `InputIconExtension` is intended to be a global extension, because it should
+> impact all menus in the same way. Copying this extension to every menu is repetitive.
+
+### UQueryBuilderSerializable
+Extensions are applied to VisualElements that initially match a `UQueryBuilderSerializable` query, 
+which is a query builder that applies selectors from the first to last selector sequentially. 
+Evaluate the query into a usable UQueryBuilder using `UQueryBuiilderSerializable.EvaluateQuery`.
+
+You can also use this class independently of the menu framework.
+
+### Basic Usage
+Use the `Menu Event Channel` to subscribe and invoke menu events. Example usage can be found in the [Example folder](https://github.com/Mushakushi/UIToolkitMenuFramework/tree/main/Assets/Example).
 
 ## Attributes
 
@@ -65,7 +83,3 @@ public UIDocument document;
 public string className; 
 ```
 
-### UQueryBuilderSerializable
-In combination with the `NameClassSelectorAttribute`, this class creates a psuedo-`UQueryBuilder`
-that allows you to use much of the same selectors within the editor and then build into 
-the actual class. 

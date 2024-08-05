@@ -1,10 +1,9 @@
-﻿using JetBrains.Annotations;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace Mushakushi.MenuFramework.Runtime.ExtensionFramework
 {
-    [UsedImplicitly, CreateAssetMenu(fileName = nameof(Menu), menuName = "ScriptableObjects/UI/Menu", order = 0)]
+    [CreateAssetMenu(fileName = nameof(Menu), menuName = "ScriptableObjects/UI/Menu", order = 0)]
     public class Menu: ScriptableObject
     {
         /// <summary>
@@ -17,6 +16,6 @@ namespace Mushakushi.MenuFramework.Runtime.ExtensionFramework
         /// The <see cref="IMenuExtension"/>(s). 
         /// </summary>
         [field: SerializeReference, SubclassSelector] 
-        public IMenuExtension[] Extensions { get; [UsedImplicitly] protected set; }
+        public IMenuExtension[] Extensions { get;  protected set; }
     }
 }

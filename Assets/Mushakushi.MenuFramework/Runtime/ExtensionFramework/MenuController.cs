@@ -1,5 +1,4 @@
-﻿using JetBrains.Annotations;
-using Mushakushi.MenuFramework.Runtime.SerializableUQuery;
+﻿using Mushakushi.MenuFramework.Runtime.SerializableUQuery;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
@@ -29,7 +28,7 @@ namespace Mushakushi.MenuFramework.Runtime.ExtensionFramework
         /// <summary>
         /// The class name of the initial focused element. 
         /// </summary>
-        [field: SerializeField, NameClassSelector(nameof(rootDocument))] 
+        [field: SerializeField] 
         protected string InitialFocusedElementClassName { get; set; }
         
         /// <summary>
@@ -47,13 +46,13 @@ namespace Mushakushi.MenuFramework.Runtime.ExtensionFramework
         /// The input action asset being used for this project.
         /// </summary>
         [field: SerializeField]
-        public PlayerInput CurrentPlayerInput { get; [UsedImplicitly] private set; }
+        public PlayerInput CurrentPlayerInput { get; private set; }
         
         /// <summary>
         /// The <see cref="IMenuExtension"/>(s) applied to the <see cref="rootDocument"/> root <see cref="VisualElement"/>. 
         /// </summary>
         [field: SerializeReference, SubclassSelector, Header("Extensions")] 
-        private IMenuExtension[] GlobalExtensions { get; [UsedImplicitly] set; }
+        private IMenuExtension[] GlobalExtensions { get; set; }
 
         protected virtual void OnEnable()
         {
@@ -106,7 +105,7 @@ namespace Mushakushi.MenuFramework.Runtime.ExtensionFramework
         /// </param>
         private void Populate(Menu menu, bool isAdditive = false)
         {
-            if (menu == null || RootContainer == null) return;
+            if (menu?.Asset == null || RootContainer == null) return;
             
             if (!isAdditive) RootContainer.Clear();
             menu.Asset.CloneTree(RootContainer);
@@ -133,7 +132,7 @@ namespace Mushakushi.MenuFramework.Runtime.ExtensionFramework
         }
 
         /// <summary>
-        /// Focuses the the Visual Element on the <see cref="RootContainer"/> that matches a <paramref name="query"/>.
+        /// Focuses the Visual Element on the <see cref="RootContainer"/> that matches a <paramref name="query"/>.
         /// </summary>
         public bool FocusElement<T>(UQueryState<T> query) where T : VisualElement
         {

@@ -30,8 +30,17 @@ MonoBehaviour:
     m_Name: package.openupm.com
     m_Url: https://package.openupm.com
     m_Scopes:
+    - com.audune.utils.types
+    - com.audune.utils.unityeditor
     - com.mackysoft.serializereference-extensions
     - com.rotaryheart.serializabledictionarylite
+    - com.solidalloy.type-references
+    - com.solidalloy.unity-dropdown
+    - com.solidalloy.util
+    - org.nuget.system.buffers
+    - org.nuget.system.memory
+    - org.nuget.system.numerics.vectors
+    - org.nuget.system.runtime.compilerservices.unsafe
     m_IsDefault: 0
     m_Capabilities: 0
     m_ConfigSource: 4

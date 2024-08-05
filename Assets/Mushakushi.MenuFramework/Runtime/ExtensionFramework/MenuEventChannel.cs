@@ -56,7 +56,7 @@ namespace Mushakushi.MenuFramework.Runtime.ExtensionFramework
         /// </summary>
         /// <param name="menu">The menu to open.</param>
         /// <param name="isAdditive">
-        /// Whether or not this menu should be appended to any currently open menu(s).
+        /// Whether this menu should be appended to any currently open menu(s).
         /// </param>
         public void RaiseOnPopulateRequested(Menu menu, bool isAdditive = false)
         {

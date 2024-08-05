@@ -30,7 +30,6 @@ namespace Mushakushi.MenuFramework.Runtime.SerializableUQuery
     {
         public readonly string selectorsContainerName;
         public readonly SelectorMode mode;
-        public readonly bool showEmptyPopup;
 
         /// <param name="selectorsContainerName">
         /// The property name of the object that names and style classes will be fetched from.
@@ -40,25 +39,15 @@ namespace Mushakushi.MenuFramework.Runtime.SerializableUQuery
         /// <param name="mode">
         /// The <see cref="SelectorMode"/>.
         /// </param>
-        /// <param name="showEmptyPopup">
-        /// Whether or not to show the foldout if there are no selectors to show. 
-        /// </param>
         /// <remarks>
-        /// The <paramref name="selectorsContainerName"/> may also be the name of a collection
-        /// (i.e. <see cref="string"/>[] or
-        /// <see cref="System.Collections.Generic.IList{T}">IList&lt;string&gt;</see> containing
+        /// The <paramref name="selectorsContainerName"/> may also be the name of an
+        /// <see cref="System.Collections.Generic.IEnumerable{T}">IEnumerable&lt;string&gt;</see> containing
         /// a list of selectors to use, in which case the <see cref="mode"/> will be ignored.
         /// </remarks>
-        public NameClassSelectorAttribute(string selectorsContainerName, SelectorMode mode = SelectorMode.All, 
-            bool showEmptyPopup = true)
+        public NameClassSelectorAttribute(string selectorsContainerName, SelectorMode mode = SelectorMode.All)
         {
             this.selectorsContainerName = selectorsContainerName;
             this.mode = mode;
-            this.showEmptyPopup = showEmptyPopup; 
         }
-        
-        /// <inheritdoc />
-        public NameClassSelectorAttribute(string selectorsContainerName, bool showEmptyPopup)
-            : this(selectorsContainerName, SelectorMode.All, showEmptyPopup) { }
     }
 }

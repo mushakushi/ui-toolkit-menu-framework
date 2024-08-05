@@ -6,9 +6,12 @@ using System.Collections;
 using System.Reflection;
 using UnityEditor;
 
-namespace Mushakushi.MenuFramework.Editor.SerializableUQuery
+namespace Mushakushi.MenuFramework.Editor
 {
-    public static class ReflectionUtility
+    /// <summary>
+    /// Utility functions for working with reflection in the editor. 
+    /// </summary>
+    public static class ReflectionUtilityEditor
     {
         /// <summary>
         /// Retrieves the target object of a serialized property, navigating through its hierarchy.
@@ -51,25 +54,6 @@ namespace Mushakushi.MenuFramework.Editor.SerializableUQuery
         public static object GetParentObjectOfProperty(SerializedProperty property)
         {
             return GetParentObjectOfProperty(property, property.serializedObject.targetObject);
-        }
-
-        /// <summary>
-        /// Returns true if <paramref name="type"/> is a primitive type or <see cref="string"/>.
-        /// </summary>
-        public static bool IsPrimitiveOrString(Type type)
-        {
-            return type.IsPrimitive || type.Name == nameof(String); 
-        }
-
-        /// <summary>
-        /// Returns true if <paramref name="type"/> is an <see cref="IEnumerable"/>
-        /// of type <see cref="string"/> or another primitive type.
-        /// </summary>
-        /// <seealso cref="IsPrimitiveOrString"/>
-        public static bool IsPrimitiveOrStringCollection(Type type)
-        {
-            return type.GetInterface(nameof(IEnumerable)) != null
-                && IsPrimitiveOrString(type.GetGenericArguments()[0]); 
         }
 
         /// <summary>
@@ -151,6 +135,67 @@ namespace Mushakushi.MenuFramework.Editor.SerializableUQuery
             var res = enumerator.Current;
             (enumerator as IDisposable)?.Dispose();
             return res;
+        }
+        
+        /// <summary>
+        /// Generates the backing field name for a given property or field name.
+        /// </summary>
+        /// <param name="name">The name of the property or field.</param>
+        /// <returns>The backing field name in the format &lt;name&gt;k__BackingField.</returns>
+        /// modified from: https://stackoverflow.com/a/76537888/25169483
+        public static string GetBackingFieldName(string name)
+        {
+#if NET_STANDARD || NET_STANDARD_2_1
+            return string.Create(1/*<*/ + name.Length + 16/*>k__BackingField*/, name, static (span, name) =>
+            {
+                span[0] = '<';
+                name.AsSpan().CopyTo(span[1..]);
+                ">k__BackingField".AsSpan().CopyTo(span[(name.Length + 1)..]);
+            });
+#else
+        return $"<{name}>k__BackingField";
+#endif
+        }
+        
+        /// <summary>
+        /// Finds the <see cref="SerializedProperty"/> corresponding to the given property name in the serialized object.
+        /// </summary>
+        /// <remarks>Does not use a property path.</remarks>
+        /// modified from: https://stackoverflow.com/a/76537888/25169483
+        public static SerializedProperty FindAutoProperty(this SerializedObject serializedObject, string name)
+        {
+            return serializedObject.FindProperty(GetBackingFieldName(name));
+        }
+ 
+        
+        /// <summary>
+        /// Finds the <see cref="SerializedProperty"/> corresponding to the given property name
+        /// relative to the specified serialized property.
+        /// </summary>
+        /// <remarks>Does not use a property path.</remarks>
+        /// modified from: https://stackoverflow.com/a/76537888/25169483
+        public static SerializedProperty FindAutoPropertyRelative(this SerializedProperty serializedProperty, string name)
+        {
+            return serializedProperty.FindPropertyRelative(GetBackingFieldName(name));
+        }
+        
+        /// <summary>
+        /// Returns true if <paramref name="type"/> is a primitive type or <see cref="string"/>.
+        /// </summary>
+        public static bool IsPrimitiveOrString(Type type)
+        {
+            return type.IsPrimitive || type.Name == nameof(String); 
+        }
+        
+        /// <summary>
+        /// Returns true if <paramref name="type"/> is an <see cref="IEnumerable"/>
+        /// of type <see cref="string"/> or another primitive type.
+        /// </summary>
+        /// <seealso cref="IsPrimitiveOrString"/>
+        public static bool IsPrimitiveOrStringCollection(Type type)
+        {
+            return type.GetInterface(nameof(IEnumerable)) != null
+                   && IsPrimitiveOrString(type.GetGenericArguments()[0]); 
         }
     }
 }

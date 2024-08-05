@@ -1,7 +1,6 @@
 ﻿using System;
 using Mushakushi.MenuFramework.Runtime.ExtensionFramework;
 using Mushakushi.MenuFramework.Runtime.SerializableUQuery;
-using RotaryHeart.Lib.SerializableDictionary;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
@@ -15,11 +14,10 @@ namespace Mushakushi.MenuFramework.Runtime.Extensions
     public class MenuConnectionButtonExtension: MenuEventExtension<Button>
     {
         /// <summary>
-        /// Maps a button, by name, to the menu that it wants to open. 
+        /// The menu that will be opened.
         /// </summary>
-        [field: SerializeField]
-        private ButtonToMenuDictionary ButtonNameToMenu { get; set; }
-        [Serializable] public sealed class ButtonToMenuDictionary: SerializableDictionaryBase<string, Menu>{}
+        [SerializeField] 
+        private Menu openMenu;
         
         [SerializeField] 
         private MenuEventChannel menuEventChannel;
@@ -34,8 +32,7 @@ namespace Mushakushi.MenuFramework.Runtime.Extensions
 
             void PopulateMenu()
             {
-                if (ButtonNameToMenu.TryGetValue(button.name, out var menu))
-                    menuEventChannel.RaiseOnPopulateRequested(menu);
+                menuEventChannel.RaiseOnPopulateRequested(openMenu);
             }
         }
 

@@ -14,12 +14,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Asset>k__BackingField: {fileID: 9197481963319205126, guid: 78ccd585999cdd14bbbabff45a7b3320, type: 3}
   <Extensions>k__BackingField:
-  - rid: 3718529147642576897
-  - rid: 3718529147642576898
+  - rid: 4183981622930440195
+  - rid: 4183981622930440199
   references:
     version: 2
     RefIds:
-    - rid: 3718529147642576897
+    - rid: 4183981622930440195
+      type: {class: MenuConnectionButtonExtension, ns: Mushakushi.MenuFramework.Runtime.Extensions, asm: Framework.UI.Runtime}
+      data:
+        openMenu: {fileID: 11400000, guid: 437a9039c04ccdb43ad075d872fbb7ed, type: 2}
+        menuEventChannel: {fileID: 11400000, guid: 7d49f1214088cf8438f3a0d2b2459654, type: 2}
+        <Query>k__BackingField:
+          selectors:
+          - rid: 4183981622930440197
+          - rid: 4183981622930440198
+    - rid: 4183981622930440197
+      type: {class: OfType, ns: Mushakushi.MenuFramework.Runtime.SerializableUQuery.Selectors, asm: Framework.UI.Runtime}
+      data:
+        type:
+          GuidAssignmentFailed: 0
+          GUID: 
+          _typeNameAndAssembly: UnityEngine.UIElements.Button, UnityEngine.UIElementsModule
+          _suppressLogs: 0
+    - rid: 4183981622930440198
+      type: {class: Name, ns: Mushakushi.MenuFramework.Runtime.SerializableUQuery.Selectors, asm: Framework.UI.Runtime}
+      data:
+        name: Next
+    - rid: 4183981622930440199
       type: {class: UnityEventButtonExtension, ns: Mushakushi.MenuFramework.Runtime.Extensions, asm: Framework.UI.Runtime}
       data:
         callbacks:
@@ -39,43 +60,17 @@ MonoBehaviour:
               m_CallState: 2
         <Query>k__BackingField:
           selectors:
-          - type: 0
-            state: 0
-            names:
-            - Wow
-            classes: []
-    - rid: 3718529147642576898
-      type: {class: MenuConnectionButtonExtension, ns: Mushakushi.MenuFramework.Runtime.Extensions, asm: Framework.UI.Runtime}
+          - rid: 4183981622930440203
+          - rid: 4183981622930440202
+    - rid: 4183981622930440202
+      type: {class: Name, ns: Mushakushi.MenuFramework.Runtime.SerializableUQuery.Selectors, asm: Framework.UI.Runtime}
       data:
-        <ButtonNameToMenu>k__BackingField:
-          reorderableList:
-            canAdd: 1
-            canRemove: 1
-            draggable: 1
-            expandable: 1
-            multipleSelection: 1
-            isExpanded: 1
-            label:
-              m_Text: Keys
-              m_Image: {fileID: 0}
-              m_Tooltip: 
-            headerHeight: 18
-            footerHeight: 13
-            slideEasing: 0.15
-            verticalSpacing: 2
-            showDefaultBackground: 1
-            elementDisplayType: 0
-            elementNameProperty: 
-            elementNameOverride: 
-            elementIcon: {fileID: 0}
-          reqReferences: {fileID: 0}
-          isExpanded: 1
-          _keyValues:
-          - Next
-          _keys:
-          - Next
-          _values:
-          - {fileID: 11400000, guid: 437a9039c04ccdb43ad075d872fbb7ed, type: 2}
-        menuEventChannel: {fileID: 11400000, guid: 7d49f1214088cf8438f3a0d2b2459654, type: 2}
-        <Query>k__BackingField:
-          selectors: []
+        name: Wow
+    - rid: 4183981622930440203
+      type: {class: OfType, ns: Mushakushi.MenuFramework.Runtime.SerializableUQuery.Selectors, asm: Framework.UI.Runtime}
+      data:
+        type:
+          GuidAssignmentFailed: 0
+          GUID: 
+          _typeNameAndAssembly: UnityEngine.UIElements.Button, UnityEngine.UIElementsModule
+          _suppressLogs: 0

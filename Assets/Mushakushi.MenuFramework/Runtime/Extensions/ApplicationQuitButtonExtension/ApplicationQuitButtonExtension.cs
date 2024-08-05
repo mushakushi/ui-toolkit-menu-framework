@@ -18,8 +18,6 @@ namespace Mushakushi.MenuFramework.Runtime.Extensions
         protected override Action OnAttach(Button visualElement, PlayerInput playerInput)
         {
             visualElement.clicked += QuitApplication;
-
-            applicationQuitHelper = new GameObject("Keyboard Application Quit Helper", typeof(ApplicationQuitHelper));
             
             return () =>
             {

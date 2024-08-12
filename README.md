@@ -10,13 +10,13 @@ A framework for expediting the creation of menus using UI toolkit.
 from the Add package from git URL option, enter:
 
 ```bash
-https://github.com/Mushakushi/UIToolkitMenuFramework.git?path=Assets/Mushakushi.MenuFramework
+https://github.com/mushakushi/ui-toolkit-menu-framework.git?path=Assets/Mushakushi.MenuFramework
 ```
 
 If you are specifying a version, append #{VERSION} to the end of the git URL. 
 
 ```bash
-https://github.com/Mushakushi/UIToolkitMenuFramework.git?path=Assets/Mushakushi.MenuFramework#{VERSION}
+https://github.com/mushakushi/ui-toolkit-menu-framework.git?path=Assets/Mushakushi.MenuFramework#{VERSION}
 ```
 
 When using the git URL, install the following upm dependencies:

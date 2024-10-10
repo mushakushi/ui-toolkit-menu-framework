@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Mushakushi.MenuFramework.Runtime.SerializableUQuery;
 using UnityEditor;
+using UnityEditor.UIElements;
 using UnityEngine.UIElements;
 
 namespace Mushakushi.MenuFramework.Editor.SerializableUQuery
@@ -15,16 +16,23 @@ namespace Mushakushi.MenuFramework.Editor.SerializableUQuery
         {
             var fieldType = fieldInfo.FieldType;
             if (fieldType != typeof(string) && fieldType != typeof(string[]) && fieldType != typeof(IList<string>))
-                return base.CreatePropertyGUI(property);
+                return GetAlignedPropertyField(property);
             
             var uiSelectorAttribute = (NameClassSelectorAttribute)attribute;
             var selectorsContainerObject = ReflectionUtilityEditor.FindPropertyRelativeAsObject(property, uiSelectorAttribute.selectorsContainerName);
-            if (selectorsContainerObject == null) return base.CreatePropertyGUI(property);
+            if (selectorsContainerObject == null) return GetAlignedPropertyField(property);
 
             var nameClassOptions = SelectorPopupUtility.GetSelectorNameClassOptions(selectorsContainerObject, uiSelectorAttribute.mode);
             var popup = SelectorPopupUtility.GetNameClassPopupField(property, nameClassOptions);
             popup.AddToClassList(BaseField<PopupField<string>>.alignedFieldUssClassName);
             return popup;
+        }
+
+        private static PropertyField GetAlignedPropertyField(SerializedProperty property)
+        {
+            var propertyField = new PropertyField(property);
+            propertyField.AddToClassList(BaseField<PopupField<string>>.alignedFieldUssClassName);
+            return propertyField;
         }
     }
 }

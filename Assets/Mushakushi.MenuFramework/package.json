@@ -17,5 +17,12 @@
 		"name": "Mushakushi",
 		"email": "info@mushakushi.com",
 		"url": "https://www.mushakushi.com"
-	}
+	},
+	"samples": [
+		{
+			"displayName": "Demo",
+		      	"description": "An example setup using TMPro",
+		      	"path": "Samples~/Demo"
+		}
+	]
 }

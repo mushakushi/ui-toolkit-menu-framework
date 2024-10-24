@@ -1,10 +1,12 @@
 {
-    "name": "Mushakushi.UIAddons.Editor",
+    "name": "Mushakushi.MenuFramework.Editor",
     "rootNamespace": "",
     "references": [
         "GUID:0056e90a88a71484daf1982d1a40c32d"
     ],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
